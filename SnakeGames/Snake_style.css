@@ -1,5 +1,5 @@
 /* Import Google font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap'); */
 
 * {
     margin: 0;
@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     justify-content: center;
     border-radius: 5px;
-    background: #293447;
+    background: transparent;
     box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
 }
 
