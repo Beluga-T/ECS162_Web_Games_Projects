@@ -1,3 +1,4 @@
+"use strict";
 const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
@@ -28,7 +29,7 @@ const handleGameOver = () => {
     location.reload();
 }
 
-const changeDirection = e => {
+const changeDirection = e => {// adapted for WASD controls
     // Changing velocity value based on key press
     if ((e.key === "ArrowUp" || e.key === "w") && velocityY != 1) {
         velocityX = 0;
@@ -50,7 +51,7 @@ controls.forEach(button => button.addEventListener("click", () => changeDirectio
 
 const initGame = () => {
     if (gameOver) return handleGameOver();
-    let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
+    let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`; 
 
     // Checking if the snake hit the food
     if (snakeX === foodX && snakeY === foodY) {
@@ -79,7 +80,7 @@ const initGame = () => {
 
     for (let i = 0; i < snakeBody.length; i++) {
         // Adding a div for each part of the snake's body
-        html += `<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
+        html += `<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`; // grid-area: column / row
         // Checking if the snake head hit the body, if so set gameOver to true
         if (i !== 0 && snakeBody[0][1] === snakeBody[i][1] && snakeBody[0][0] === snakeBody[i][0]) {
             gameOver = true;
