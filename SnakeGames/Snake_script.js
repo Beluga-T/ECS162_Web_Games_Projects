@@ -51,7 +51,7 @@ controls.forEach(button => button.addEventListener("click", () => changeDirectio
 
 const initGame = () => {
     if (gameOver) return handleGameOver();
-    let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`; 
+    let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
 
     // Checking if the snake hit the food
     if (snakeX === foodX && snakeY === foodY) {
@@ -91,4 +91,4 @@ const initGame = () => {
 
 updateFoodPosition();
 setIntervalId = setInterval(initGame, 100);
-document.addEventListener("keyup", changeDirection);
+document.addEventListener("keydown", changeDirection); // change from Keyup to keyDown for more responsive controls
