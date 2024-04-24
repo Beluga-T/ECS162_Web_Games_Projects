@@ -13,7 +13,8 @@ body {
     background: #E3F2FD;
 }
 
-.wrapper {
+.wrapper { /* This is the main container */
+    
     width: 65vmin;
     height: 70vmin;
     display: flex;
