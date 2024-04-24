@@ -23,6 +23,7 @@ header {
     color: #B8C6DC;
     font-size: 1.5rem;
     font-weight: 500;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -82,6 +83,7 @@ header {
     border-right: 1px solid #171B26;
     background: #60ffb2;
 }
+
 
 @media screen and (max-width: 800px) {
     .wrapper {

@@ -6,7 +6,7 @@ const controls = document.querySelectorAll(".controls i");
 
 let gameOver = false;
 let foodX, foodY;
-let snakeX = 5, snakeY = 5; 
+let snakeX = 5, snakeY = 5;
 let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
@@ -31,18 +31,48 @@ const handleGameOver = () => {
 
 const changeDirection = e => {// adapted for WASD controls
     // Changing velocity value based on key press
-    if ((e.key === "ArrowUp" || e.key === "w") && velocityY != 1) {
-        velocityX = 0;
-        velocityY = -1;
-    } else if ((e.key === "ArrowDown" || e.key === "s") && velocityY != -1) {
-        velocityX = 0;
-        velocityY = 1;
-    } else if ((e.key === "ArrowLeft" || e.key === "a") && velocityX != 1) {
-        velocityX = -1;
-        velocityY = 0;
-    } else if ((e.key === "ArrowRight" || e.key === "d") && velocityX != -1) {
-        velocityX = 1;
-        velocityY = 0;
+    // if ((e.key === "ArrowUp" || e.key === "w") && velocityY != 1) {
+    //     velocityX = 0;
+    //     velocityY = -1;
+    // } else if ((e.key === "ArrowDown" || e.key === "s") && velocityY != -1) {
+    //     velocityX = 0;
+    //     velocityY = 1;
+    // } else if ((e.key === "ArrowLeft" || e.key === "a") && velocityX != 1) {
+    //     velocityX = -1;
+    //     velocityY = 0;
+    // } else if ((e.key === "ArrowRight" || e.key === "d") && velocityX != -1) {
+    //     velocityX = 1;
+    //     velocityY = 0;
+    // }
+    switch (e.key) {
+        case "ArrowUp":
+        case "w":
+            if (velocityY != 1) {
+                velocityX = 0;
+                velocityY = -1;
+            }
+            break;
+        case "ArrowDown":
+        case "s":
+            if (velocityY != -1) {
+                velocityX = 0;
+                velocityY = 1;
+            }
+            break;
+        case "ArrowLeft":
+        case "a":
+            if (velocityX != 1) {
+                velocityX = -1;
+                velocityY = 0;
+            }
+            break;
+        case "ArrowRight":
+        case "d":
+            if (velocityX != -1) {
+                velocityX = 1;
+                velocityY = 0;
+            }
+            break;
     }
 }
 
@@ -90,5 +120,5 @@ const initGame = () => {
 }
 
 updateFoodPosition();
-setIntervalId = setInterval(initGame, 100);
+setIntervalId = setInterval(initGame, 10); // 150ms interval for the game loop
 document.addEventListener("keydown", changeDirection); // change from Keyup to keyDown for more responsive controls
