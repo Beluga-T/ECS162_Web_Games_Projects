@@ -126,7 +126,7 @@ const initGame = () => {
     playBoard.innerHTML = html;
 }
 updateFoodPosition();
-const setGameMode = (mode) => {
+const setGameMode = (mode) => { //added for game mode selection
     currentSpeed = gameSpeed[mode];
     if (setIntervalId) clearInterval(setIntervalId);
     // setIntervalId = setInterval(runGame, currentSpeed);

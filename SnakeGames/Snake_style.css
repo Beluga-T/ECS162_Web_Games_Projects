@@ -40,6 +40,35 @@ header {
     box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
 }
 
+.gamemode {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.btn {
+    padding: 8px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #212837;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    display: inline-flexbox
+}
+
+#ez:hover {
+    background-color: #45a049;
+}
+
+#HD:hover {
+    background-color: #f0d214;
+}
+
+#CZ:hover {
+    background-color: #ff0101;
+}
+
 .game-details {
     color: #B8C6DC;
     font-weight: 500;
@@ -49,6 +78,8 @@ header {
     justify-content: space-between;
     background: #212837;
     border-bottom: 1px solid #ffffff89;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .play-board {
