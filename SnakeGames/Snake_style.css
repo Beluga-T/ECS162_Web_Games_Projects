@@ -43,7 +43,14 @@ header {
 .gamemode {
     display: flex;
     justify-content: center;
-    margin: 0px;
+    padding: 0;
+    /* Add some padding around the game mode buttons */
+    background: #2C3E50;
+    /* Optional: a subtle background for the game mode container */
+    border-radius: 8px;
+    /* Rounded corners for the container */
+    margin-bottom: 10px;
+    /* Distance from the game board or other elements */
 }
 
 .btn {
@@ -136,4 +143,5 @@ header {
         font-size: 1rem;
         color: #FF003D;
     }
+
 }
