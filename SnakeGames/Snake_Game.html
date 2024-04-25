@@ -19,11 +19,15 @@
 <body>
     <canvas id="starCanvas"></canvas>
     <div class="wrapper">
+        <div class="gamemode">
+            <button class="btn" onclick="setGameMode('easy')">Easy Mode</button>
+            <button class="btn" onclick="setGameMode('hard')">Hard Mode</button>
+            <button class="btn" onclick="setGameMode('crazy')">Crazy Mode</button>
+        </div>
+
         <div class="game-details">
             <span class="score">Score: 0</span>
-            <div class="gamemode">
-                <button class="btn" onclick="changeMode()">Change Mode</button>
-            </div>
+
             <span class="high-score">High Score: 0</span>
 
         </div>

@@ -11,10 +11,17 @@ let velocityX = 0, velocityY = 0;
 let snakeBody = [];
 let setIntervalId;
 let score = 0;
+let currentSpeed = 200;
 
+const gameSpeed = {
+    'easy': 200,
+    'hard': 50,
+    'crazy': 25
+};
 // Getting high score from the local storage
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerText = `High Score: ${highScore}`;
+
 
 const updateFoodPosition = () => {
     // Passing a random 1 - 30 value as food position
@@ -118,7 +125,12 @@ const initGame = () => {
     }
     playBoard.innerHTML = html;
 }
-
 updateFoodPosition();
-setIntervalId = setInterval(initGame, 10); // 150ms interval for the game loop
-document.addEventListener("keydown", changeDirection); // change from Keyup to keyDown for more responsive controls
+const setGameMode = (mode) => {
+    currentSpeed = gameSpeed[mode];
+    if (setIntervalId) clearInterval(setIntervalId);
+    // setIntervalId = setInterval(runGame, currentSpeed);
+    setIntervalId = setInterval(initGame, currentSpeed); // 150ms interval for the game loop
+    document.addEventListener("keydown", changeDirection); // change from Keyup to keyDown for more responsive controls
+};
+
