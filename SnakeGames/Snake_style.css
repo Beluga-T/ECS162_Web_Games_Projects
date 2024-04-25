@@ -18,7 +18,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10vh;
+    height: auto;
     background: transparent;
     color: #B8C6DC;
     font-size: 1.5rem;
@@ -29,8 +29,9 @@ header {
 .wrapper {
     /* This is the main container */
 
-    width: 65vmin;
-    height: 70vmin;
+    max-width: 600px;
+    max-height: 700px;
+    width: 100%;
     display: flex;
     overflow: hidden;
     flex-direction: column;
@@ -38,6 +39,7 @@ header {
     border-radius: 5px;
     background: transparent;
     box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+    margin: auto;
 }
 
 .gamemode {
@@ -51,11 +53,12 @@ header {
     /* Rounded corners for the container */
     margin-bottom: 10px;
     /* Distance from the game board or other elements */
+    margin-top: 10px;
 }
 
 .btn {
     padding: 8px 15px;
-    margin: 5px;
+    margin: 8px auto;
     cursor: pointer;
     background-color: #212837;
     color: white;
@@ -90,12 +93,13 @@ header {
 }
 
 .play-board {
-
-    height: 100%;
-    width: 100%;
     display: grid;
     background: #212837;
     grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    width: 100%;
+    aspect-ratio: 1;
+    /* Ensures the width and height are always the same */
+    margin: auto;/
 }
 
 .play-board .food {
@@ -126,7 +130,7 @@ header {
 @media screen and (max-width: 800px) {
     .wrapper {
         width: 90vmin;
-        height: 115vmin;
+        height: auto;
     }
 
     .game-details {
