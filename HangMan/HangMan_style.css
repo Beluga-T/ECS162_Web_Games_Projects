@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#wordDisplay {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input,
+button {
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+}
