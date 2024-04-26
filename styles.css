@@ -26,7 +26,7 @@ header {
     /* White color for visibility */
     font-size: 24px;
     padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(44, 62, 80, 0.5);
     /* Semi-transparent background for the header */
     z-index: 2;
 
@@ -56,7 +56,7 @@ canvas {
     position: relative;
     z-index: 1;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.145);
+    background: rgba(44, 66, 88, 0.44);
     /* Use semi-transparent white for glass effect */
     border-radius: 15px;
     margin: 20px auto;
@@ -83,7 +83,7 @@ ul {
 
 ul li {
     padding: 10px;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(44, 62, 80, 1);
     margin-bottom: 5px;
     border-radius: 10px;
     text-align: center;
@@ -91,10 +91,10 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: black;
+    color: #FFF;
     display: block;
 }
 
 ul li:hover {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(20, 129, 201, 0.854);
 }
