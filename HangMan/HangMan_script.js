@@ -1,13 +1,17 @@
+"use strict";
 const words = ["javascript", "hangman", "programming", "coding"];
-let selectedWord = words[Math.floor(Math.random() * words.length)];
-let displayWord = "_".repeat(selectedWord.length).split('');
+function random() {
+    return Math.floor(Math.random(0, 1) * words.length);
+}
+let selectedWord = words[random()];
+let displayWord = "_".repeat(selectedWord.length).split(''); // Create an array of underscores
 let wrongGuesses = 0;
 
-document.getElementById('wordDisplay').innerHTML = displayWord.join(' ');
 
 function makeGuess() {
+    let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
     function Eval(userGuess) {
-        alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         return userGuess.length === 1 && alphabet.includes(userGuess);
     }
     let userGuess = document.getElementById('userGuess').value.toLowerCase();
@@ -38,8 +42,13 @@ function makeGuess() {
     document.getElementById('userGuess').value = '';  // Clear the input field
 }
 
-document.getElementById('userGuess').addEventListener('keypress', function (event) {
-    if (event.key === 'Enter') {
-        makeGuess();
+document.addEventListener('DOMContentLoaded', function () {
+    const userGuessInput = document.getElementById('userGuess');
+    if (userGuessInput) {
+        userGuessInput.addEventListener('keypress', function (event) {
+            if (event.key === 'Enter') {
+                makeGuess();
+            }
+        });
     }
 });
