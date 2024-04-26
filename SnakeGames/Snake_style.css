@@ -5,38 +5,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #2C3E50;
-    color: #B8C6DC;
-    padding: 0 20px;
-    height: 60px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Update nav item styling */
-nav a {
-    color: #B8C6DC;
-    text-decoration: none;
-    /* Removes underline */
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav a:hover {
-    background-color: #34495e;
-    /* Darker background on hover */
-    color: #FFFFFF;
-    /* White text on hover */
-}
 
 body {
     padding-top: 70px;

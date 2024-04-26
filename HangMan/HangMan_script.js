@@ -1,5 +1,5 @@
 "use strict";
-const words = ["javascript", "hangman", "programming", "coding"];
+const words = ["javascript", "hangman", "programming", "coding", "game", "mississippi"]
 function random() {
     return Math.floor(Math.random(0, 1) * words.length);
 }
