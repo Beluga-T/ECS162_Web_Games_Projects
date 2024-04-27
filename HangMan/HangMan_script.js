@@ -6,8 +6,73 @@ function random() {
 let selectedWord = words[random()];
 let displayWord = "_".repeat(selectedWord.length).split(''); // Create an array of underscores
 let wrongGuesses = 0;
+let blackslash = "\\";
+
+const hangmanStages = [
+    `
++-------+
+|     |
+      |
+      |
+      |
+      |
+=========`,
+    `
++-------+
+|     |
+|     O
+|
+|
+|
+=========`,
+    `
++-------+
+|     |
+|     O
+|     |
+|
+|
+=========`,
+    `
++-------+
+|     |
+|     O
+|    /|
+|    
+|
+=========`,
+    `
++-------+
+|     |
+|     O
+|    /|\\
+|
+|      
+=========`,
+    `
++-------+
+|     |
+|     O
+|    /|\\ 
+|    / 
+|
+=========`,
+    `
++-------+
+|     |
+|     O
+|    /|\\
+|    / \\
+|      
+=========`,
+];
 
 
+
+function updateHangmanDrawing() {
+
+    document.getElementById('hangmanDrawing').textContent = hangmanStages[wrongGuesses];
+}
 function makeGuess() {
     let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -30,11 +95,14 @@ function makeGuess() {
             }
         } else {
             wrongGuesses++;
-            document.getElementById('hangmanDrawing').innerText = 'Wrong guesses: ' + wrongGuesses;
+            updateHangmanDrawing();
+            document.getElementById('WrongCount').innerText = 'Wrong guesses: ' + wrongGuesses;
             // Check if the game is lost
-            if (wrongGuesses >= 6) {
-                alert('Game Over! The word was: ' + selectedWord);
-            }
+            setTimeout(() => {
+                if (wrongGuesses >= 6) {
+                    alert('Game Over! The word was: ' + selectedWord);
+                }
+            }, 100);
         }
     } else {
         alert('Please enter a valid letter.');
@@ -52,3 +120,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="HangMan_style.css">
     <script src="HangMan_script.js"></script>
+    <script src="../home_script.js"></script>
 </head>
 <nav>
     <a href="../index.html">Home</a></li>
@@ -14,11 +15,17 @@
 </nav>
 
 <body>
+    <canvas id="starCanvas"></canvas>
+
     <h1> Don't Let The Man Hang! </h1>
     <p id="wordDisplay"></p>
     <input type="text" id="userGuess" placeholder="Enter a letter" maxlength="1">
     <button onclick="makeGuess()">Guess</button>
-    <p id="hangmanDrawing"></p>
+    <p id="WrongCount"></p>
+    <pre id="hangmanDrawing"></pre>
+
+
+
 
 </body>
 

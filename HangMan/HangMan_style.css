@@ -3,6 +3,7 @@ body {
     text-align: center;
     padding: 20px;
     margin-top: 70px;
+    COLOR: #ffffffdb;
 }
 
 p {
@@ -10,10 +11,50 @@ p {
     margin-top: 20px;
 }
 
+/* Container styling */
+.container {
+    text-align: center;
+    /* Centers inline or inline-block elements within */
+    width: 100%;
+    /* Takes full width to ensure centering effect across the page */
+}
+
+/* Preformatted text block styling */
+pre {
+    display: inline-block;
+    /* Allows the block itself to be centered as an inline element */
+    text-align: left;
+    /* Keeps text inside the pre block aligned to the left */
+    font-family: 'Courier New', monospace;
+    /* Monospace font for consistent character width */
+    white-space: pre;
+    /* Preserves whitespace and formatting of the text */
+    font-size: 16px;
+    /* Adjustable font size */
+    color: #ffffff;
+    /* Text color for visibility */
+    background-color: #000;
+    /* Background color for contrast */
+    padding: 10px;
+    /* Padding around text */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin: 20px auto;
+    /* Vertical margins and horizontal auto for centering */
+    line-height: 1.5;
+    /* Line height for better readability */
+    width: auto;
+    /* Width is auto to wrap the content */
+    max-width: 80%;
+    /* Max-width to prevent overly wide blocks on large screens */
+}
+
+
 #wordDisplay {
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 
 input,
 button {
