@@ -101,6 +101,7 @@ function makeGuess() {
             setTimeout(() => {
                 if (wrongGuesses >= 6) {
                     alert('Game Over! The word was: ' + selectedWord);
+
                 }
             }, 100);
         }
