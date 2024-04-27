@@ -1,21 +1,36 @@
 "use strict";
-const words = ["javascript", "hangman", "programming", "coding", "game", "mississippi"]
-function random() {
-    return Math.floor(Math.random(0, 1) * words.length);
-}
-let selectedWord = words[random()];
-let displayWord = "_".repeat(selectedWord.length).split(''); // Create an array of underscores
+const words = ["javascript", "hangman", "programming", "coding", "game", "mississippi", "california", "coffee", "whisky", "league", "safari"];
+
+let selectedWord = '';
+let displayWord = [];
 let wrongGuesses = 0;
-let blackslash = "\\";
+
+
+function initializeGame() {
+    wrongGuesses = 0;
+    selectedWord = words[random()]; // Safely select a word
+    displayWord = "_".repeat(selectedWord.length).split('');
+    document.getElementById('wordDisplay').textContent = displayWord.join(' ');
+    updateHangmanDrawing(); // Initialize hangman drawing correctly
+}
+
+
+function random() {
+    console.log(Math.floor(Math.random(0, 1) * words.length));
+    return Math.floor(Math.random(0, 1) * words.length);
+
+}
+
+
 
 const hangmanStages = [
     `
 +-------+
 |     |
-      |
-      |
-      |
-      |
+|
+|
+|
+|
 =========`,
     `
 +-------+
@@ -91,19 +106,24 @@ function makeGuess() {
             document.getElementById('wordDisplay').innerHTML = displayWord.join(' ');
             // Check if the game is won
             if (!displayWord.includes('_')) {
-                alert('Congratulations! You won!');
+
+                setTimeout(() => {
+                    alert('Congratulations! You won!');
+                }, 100);
+                initializeGame();
+
             }
         } else {
             wrongGuesses++;
             updateHangmanDrawing();
             document.getElementById('WrongCount').innerText = 'Wrong guesses: ' + wrongGuesses;
             // Check if the game is lost
-            setTimeout(() => {
-                if (wrongGuesses >= 6) {
+            if (wrongGuesses >= 6) {
+                setTimeout(() => {
                     alert('Game Over! The word was: ' + selectedWord);
-
-                }
-            }, 100);
+                    initializeGame();
+                }, 100);  // Delay to let other updates happen before alert
+            }
         }
     } else {
         alert('Please enter a valid letter.');
@@ -112,6 +132,7 @@ function makeGuess() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    initializeGame();
     const userGuessInput = document.getElementById('userGuess');
     if (userGuessInput) {
         userGuessInput.addEventListener('keypress', function (event) {
