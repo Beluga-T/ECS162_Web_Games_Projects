@@ -131,8 +131,17 @@ figure figcaption {
     color: #5f605d;
     margin-top: 5px;
     font-style: italic;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     /* Adjust for readability */
+}
+
+figcaption h2 {
+    color: #ffffffd4;
+    margin-top: 5px;
+    font-style: normal;
+    font-size: 0.9rem;
+    /* Adjust for readability */
+
 }
 
 footer {
