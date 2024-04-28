@@ -7,29 +7,21 @@
 
 body,
 html {
-    margin: 0;
-    padding: 0;
     height: 100%;
     overflow: hidden;
 }
 
-
-
 header {
     position: fixed;
-    /* Changed from absolute to fixed to make it always stay at the top */
     top: 0;
     left: 0;
     width: 100%;
     text-align: center;
     color: #FFF;
-    /* White color for visibility */
     font-size: 24px;
     padding: 10px 0;
     background-color: rgba(44, 62, 80, 0.5);
-    /* Semi-transparent background for the header */
-    z-index: 2;
-
+    z-index: 1000;
 }
 
 canvas {
@@ -44,12 +36,9 @@ canvas {
 
 #starCanvas {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    /* Make sure the canvas is behind all other content */
 }
 
 .content {
@@ -57,19 +46,15 @@ canvas {
     z-index: 1;
     padding: 20px;
     background: rgba(44, 66, 88, 0.44);
-    /* Use semi-transparent white for glass effect */
     border-radius: 15px;
-    margin: 20px auto;
-    /* Center the content */
+    margin: 100px auto 20px;
+    /* Center the content and ensure it does not overlap the header */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    margin-top: 100px;
-    /* Adjusted top margin to push it below the header */
     backdrop-filter: blur(3px);
-    /* Apply blur effect for frosted glass look */
-
+    overflow: hidden;
+    /* Ensures no content spills outside the container */
 }
-
 
 header h1 {
     text-align: center;
@@ -91,7 +76,7 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    color: #FFF;
+    color: #ffffff6e;
     display: block;
 }
 
@@ -107,7 +92,6 @@ nav {
     color: #B8C6DC;
     padding: 0 20px;
     height: 60px;
-    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -115,19 +99,50 @@ nav {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Update nav item styling */
 nav a {
     color: #B8C6DC;
     text-decoration: none;
-    /* Removes underline */
     padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
     background-color: #34495e;
-    /* Darker background on hover */
     color: #FFFFFF;
-    /* White text on hover */
+}
+
+figure {
+    margin: 0;
+    /* Adjusts margin to ensure images are centered */
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-width: 150px;
+    /* Ensures image is responsive within its container */
+    max-height: auto;
+    /* Maintains aspect ratio */
+    border-radius: 10px;
+    /* Adds styled corners to the images */
+}
+
+figure figcaption {
+    color: #5f605d;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 0.8rem;
+    /* Adjust for readability */
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    font-size: 16px;
+    padding: 10px 0;
+    background-color: rgba(44, 62, 80, 0.5);
+    z-index: 2;
 }
