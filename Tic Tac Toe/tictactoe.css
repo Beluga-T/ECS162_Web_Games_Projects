@@ -1,3 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin-top: 70px;
+    COLOR: #ffffffdb;
+}
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Creates a 3x3 grid */
@@ -30,4 +37,11 @@
 #resultDisplay{
     font-size: 24px;
     margin: 20px;
+    text-align: center;
+}
+#gameContainer{
+    margin-top: 48px;
+}
+button{
+    padding: 12px;
 }
