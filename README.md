@@ -1,4 +1,4 @@
-# ECS162_Web_Games_Projects
+# ECS162 Web Games Arcade
 Check out the actual website here: [ECS162 Web Games Projects](https://beluga-t.github.io/ECS162_Web_Games_Projects/)
 
 ## Overview of the project
