@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Game Arcade</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tictactoe.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Game Arcade</a></h1>
+    </header>
+
+    <div id="gameContainer" class="game-play-area">
+        <h2>Tic Tac Toe</h2>
+        <div id="difficultySelection">
+            <label>Difficulty:</label>
+            <input type="radio" name="difficulty" id="easy" value="easy"> Easy
+            <input type="radio" name="difficulty" id="medium" value="medium" checked> Medium
+            <input type="radio" name="difficulty" id="hard" value="hard"> Hard
+        </div>
+        <div id="gameBoard" class="board">
+            <!-- Creating 9 cells for the Tic Tac Toe grid -->
+            <button class="cell" data-cell-index="0"></button>
+            <button class="cell" data-cell-index="1"></button>
+            <button class="cell" data-cell-index="2"></button>
+            <button class="cell" data-cell-index="3"></button>
+            <button class="cell" data-cell-index="4"></button>
+            <button class="cell" data-cell-index="5"></button>
+            <button class="cell" data-cell-index="6"></button>
+            <button class="cell" data-cell-index="7"></button>
+            <button class="cell" data-cell-index="8"></button>
+        </div>
+        <div id="resultDisplay">Player X's turn</div>
+        <button id="restartButton" onclick="restartGame()">Restart Game</button>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2024 Game Arcade</p>
+    </footer>
+
+    <script src="tictactoe.js"></script>
+</body>
+</html>
