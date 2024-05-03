@@ -108,7 +108,8 @@ function makeGuess() {
             if (!displayWord.includes('_')) {
 
                 setTimeout(() => {
-                    alert('Congratulations! You won!');
+                    // alert('Congratulations! You won!');
+                    messageDisplay.textContent = 'Congratulations! You won!';
                 }, 100);
                 initializeGame();
 
@@ -120,13 +121,16 @@ function makeGuess() {
             // Check if the game is lost
             if (wrongGuesses >= 6) {
                 setTimeout(() => {
-                    alert('Game Over! The word was: ' + selectedWord);
+                    // alert('Game Over! The word was: ' + selectedWord);
+                    messageDisplay.textContent = `Game Over! The word was: ${selectedWord}`;
+
                     initializeGame();
                 }, 100);  // Delay to let other updates happen before alert
             }
         }
     } else {
-        alert('Please enter a valid letter.');
+        // alert('Please enter a valid letter.');
+        messageDisplay.textContent = 'Please enter a valid letter.';
     }
     document.getElementById('userGuess').value = '';  // Clear the input field
 }
