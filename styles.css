@@ -39,7 +39,7 @@ canvas {
 
 #starCanvas {
     position: absolute;
-    width: 150%;
+    width: 100%;
     height: 150%;
     z-index: -2;
 }
