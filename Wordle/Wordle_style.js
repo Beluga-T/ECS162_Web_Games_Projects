@@ -52,14 +52,24 @@ function makeGuess(){
         let currentLetter = currentWord[i] 
         let letterID = firstLetterOfWordID + i
         document.getElementById(letterID).innerText = currentLetter //showcase letter inside dedicated cell
-        if(currentLetter == word[i]){
+        if(currentLetter == word[i]){ //check for correct letter in correct spot
             document.getElementById(letterID).classList.add("green")
             curr = curr.replace(currentLetter, '')
             console.log(curr)
-        } else if(curr.includes(currentLetter)){
+        }
+    }
+    for(let i = 0; i < currentWord.length; i++){
+        let currentLetter = currentWord[i] 
+        let letterID = firstLetterOfWordID + i
+        if(curr.includes(currentLetter)){ //check for correct letter in incorrect spot
             document.getElementById(letterID).classList.add("orange")
             curr = curr.replace(currentLetter, '')
-        } else {
+        }
+    }
+    for(let i = 0; i < currentWord.length; i++){
+        let currentLetter = currentWord[i] 
+        let letterID = firstLetterOfWordID + i
+        if(!word.includes(currentLetter) || document.getElementById(letterID).classList.length < 2){
             document.getElementById(letterID).classList.add("gray")
         }
     }
