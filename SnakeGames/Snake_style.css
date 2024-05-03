@@ -10,14 +10,18 @@ body {
     /* Allows content to define the height */
     padding-top: 70px;
     /* This should be at least the height of your nav to prevent overlap */
-    display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background: #E3F2FD;
 }
 
-
+h1{
+    font-size: 32px;
+    color: #ffffffdb;
+    text-align: center;
+    margin: 12px 0 24px 0;
+}
 
 
 .wrapper {
