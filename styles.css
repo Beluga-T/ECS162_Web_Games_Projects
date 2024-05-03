@@ -59,7 +59,7 @@ canvas {
     /* Ensures no content spills outside the container */
 }
 
-header h1 {
+h1 {
     text-align: center;
     font-size: 24px;
 }
