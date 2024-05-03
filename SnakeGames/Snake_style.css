@@ -129,6 +129,7 @@ footerSNAKE {
     left: 0;
     margin-top: 10px;
     /* bottom: 0; */
+    margin-bottom: 0px;
     width: 100%;
     text-align: center;
     color: #FFF;
@@ -147,6 +148,10 @@ footerSNAKE {
     .game-details {
         font-size: 1rem;
         padding: 15px 27px;
+    }
+
+    footerSNAKE {
+        bottom: 0;
     }
 
     .controls {
