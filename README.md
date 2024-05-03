@@ -1,30 +1,20 @@
 # ECS162_Web_Games_Projects
-Check actually Website Here: https://beluga-t.github.io/ECS162_Web_Games_Projects/
+Check out the actual website here: [ECS162 Web Games Projects](https://beluga-t.github.io/ECS162_Web_Games_Projects/)
 
-# Overview of the project
-    This project is a simple web game arcade that contains four games: Hangman, Wordle, Classic Snake Game, and Tic
-    Tac Toe.
-    The project is created for the course ECS 162 Web Programming at the University of California, Davis.
-    The project is created by Timothy Dare and Siwei Tan.
+## Overview of the project
+This project is a simple web game arcade featuring four games: Hangman, Wordle, Classic Snake Game, and Tic Tac Toe. It was created for the course ECS 162 Web Programming at the University of California, Davis by Timothy Dare and Siwei Tan.
 
-    We have created a simple web game arcade that contains four games: Hangman, Wordle, Classic Snake Game, and Tic Tac Toe.
-    We maintained a consistent design style for the game icons and the overall layout of the website.
-    The starry background use a canvas element to create a starry night sky effect. the stars are randomly generated and
-    animated to create a twinkling effect.
-    the size of the stars is related to the speed of the stars, which is determined by the size of the stars.
-    the larger the stars, the slower they move up.
-    All the icons and image assets are from Flaticon, and the links to the original icons are provided in the game and
-    its shown right below the game icons.
+The design maintains a consistent style across game icons and the overall layout. A starry night sky background, implemented using a canvas element, features randomly generated stars that twinkle and move. The size of the stars inversely affects their movement speed; larger stars move slower. All icons and image assets are sourced from Flaticon, with original icon links provided below each game icon.
 
-# Snake Game 
-    Adapted from a project by anantaraha on GitHub: https://github.com/anantaraha/snakeloop
-    This project is licensed under the MIT License: https://github.com/anantaraha/snakeloop/blob/main/LICENSE
+## Snake Game 
+Adapted from a project by anantaraha on GitHub ([Original Project](https://github.com/anantaraha/snakeloop)), this game is licensed under the MIT License ([License](https://github.com/anantaraha/snakeloop/blob/main/LICENSE)).
 
-    We added a starry night sky background to the game arcade.
-    change the color of the snake and the food to match the color scheme of the game arcade.
-    We added a game over screen that displays the final score and high score of the player store in localstoreage.
-    We add mode buttons to change the speed of the snake as well as the difficulty of the game.
-    
-# Tic Tac Toe
-    Adapted from Profeesor's source code.
-    We added a starry night sky background to the game arcade.
+Enhancements include:
+- Addition of a starry night sky background to match the arcade theme.
+- Color adjustments for the snake and food to align with the arcade's color scheme.
+- A game over screen that displays the final score and high score, stored in localStorage.
+- Mode buttons to adjust the snake's speed and the game's difficulty.
+- Eliminate all the alert function
+
+## Tic Tac Toe
+Adapted from the Professor's source code, this version also includes the starry night sky background consistent with the arcade's theme.
