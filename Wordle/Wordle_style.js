@@ -5,8 +5,6 @@ let guessCount = 0
 let word = ""
 let lastGuess = ""
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     initializeGame()
     const userGuessInput = document.getElementById('userGuess');
@@ -22,6 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function initializeGame(){
+    word = words[random()]
+    console.log(word)
+    guessCount = 0
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach(cell => {
+        cell.innerHTML = "";
+        cell.className = 'cell';
+    });
+}
+
 function random() {
     return Math.floor(Math.random(0, 1) * words.length);
 }
@@ -29,6 +38,7 @@ function random() {
 function makeGuess(){
     let currentWord = document.getElementById("userGuess").value.toLowerCase();
     let regularExpression = /^[a-zA-Z]+$/;
+    //check if valid input (5 letters and all alphabetic characters)
     if(currentWord.length != 5 || !regularExpression.test(currentWord)){
         alert("Word must be 5 letters and all alphabetic characters")
         document.getElementById("userGuess").value = ""
@@ -36,11 +46,11 @@ function makeGuess(){
     }
     
     const firstLetterOfWordID = guessCount * 5 + 1
-    let curr = word
+    let curr = word //used to eliminate where two letters appear orange when only one occurence in actual word
     for(let i = 0; i < currentWord.length; i++){
-        let currentLetter = currentWord[i]
+        let currentLetter = currentWord[i] 
         let letterID = firstLetterOfWordID + i
-        document.getElementById(letterID).innerText = currentLetter
+        document.getElementById(letterID).innerText = currentLetter //showcase letter inside dedicated cell
         if(currentLetter == word[i]){
             document.getElementById(letterID).classList.add("green")
             curr = curr.replace(currentLetter, '')
@@ -71,13 +81,3 @@ function checkGame(lastGuess){
     }
 }
 
-function initializeGame(){
-    word = words[random()]
-    console.log(word)
-    guessCount = 0
-    const cells = document.querySelectorAll('.cell');
-    cells.forEach(cell => {
-        cell.innerHTML = "";
-        cell.className = 'cell';
-    });
-}
