@@ -25,4 +25,6 @@ Check actually Website Here: https://beluga-t.github.io/ECS162_Web_Games_Project
     We added a game over screen that displays the final score and high score of the player store in localstoreage.
     We add mode buttons to change the speed of the snake as well as the difficulty of the game.
     
-
+# Tic Tac Toe
+    Adapted from Profeesor's source code.
+    We added a starry night sky background to the game arcade.
