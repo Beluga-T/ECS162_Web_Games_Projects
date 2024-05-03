@@ -29,6 +29,7 @@ function initializeGame(){
         cell.innerHTML = "";
         cell.className = 'cell';
     });
+    document.getElementById("game-message").textContent = ""
 }
 
 function random() {
@@ -40,7 +41,7 @@ function makeGuess(){
     let regularExpression = /^[a-zA-Z]+$/;
     //check if valid input (5 letters and all alphabetic characters)
     if(currentWord.length != 5 || !regularExpression.test(currentWord)){
-        alert("Word must be 5 letters and all alphabetic characters")
+        document.getElementById("error-message").textContent = "Word must be 5 letters and all alphabetic characters"
         document.getElementById("userGuess").value = ""
         return
     }
@@ -63,21 +64,24 @@ function makeGuess(){
         }
     }
     document.getElementById("userGuess").value = ""
+    document.getElementById("error-message").textContent = ""
     guessCount++
     lastGuess = currentWord
 }
 
 function checkGame(lastGuess){
     if(lastGuess == word){
-        alert("You won!")
+        document.getElementById("game-message").classList.add("win")
+        document.getElementById("game-message").textContent = "You won!"
         setTimeout(() => {
             initializeGame()
-        }, 150);
+        }, 1000);
     } else if(guessCount == 6){
-        alert("Correct word was " + word)
+        document.getElementById("game-message").classList.add("loss")
+        document.getElementById("game-message").textContent = "Correct word was " + word
         setTimeout(() => {
             initializeGame()
-        }, 150);
+        }, 1000);
     }
 }
 
