@@ -157,3 +157,15 @@ footer {
     background-color: rgba(44, 62, 80, 0.8);
     z-index: 100;
 }
+
+footerSubpages {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    padding: 10px 0;
+    background-color: rgba(44, 62, 80, 0.8);
+    z-index: 100;
+}
