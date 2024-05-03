@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const starCanvas = document.getElementById('starCanvas');
 
     function adjustCanvasHeight() {
-        // Set the canvas height to the full document height
-        starCanvas.style.height = `${document.documentElement.scrollHeight + 200}px`;
+        let bodyHeight = document.documentElement.scrollHeight + 200;
+        canvas.height = bodyHeight; // Update the internal canvas drawing buffer height
+        canvas.style.height = bodyHeight + 'px'; // Update the CSS height
     }
 
     // Adjust the canvas size on load
