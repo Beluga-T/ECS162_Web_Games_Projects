@@ -3,7 +3,7 @@ const playBoard = document.querySelector(".play-board");
 const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 const controls = document.querySelectorAll(".controls i");
-
+const restartButton = document.getElementById("restartButton");
 let gameOver = false; // Game over flag
 let foodX, foodY; // Food position
 let snakeX = 5, snakeY = 5; // Snake head position 
@@ -29,12 +29,13 @@ const updateFoodPosition = () => { //added for food position update
     foodY = Math.floor(Math.random() * 30) + 1;
 }
 
-const handleGameOver = () => { //Game over handling
-    // Clearing the timer and reloading the page on game over
+const handleGameOver = () => {
     clearInterval(setIntervalId);
-    alert("Game Over! Press OK to replay...");
-    location.reload();
+    restartButton.style.display = 'block'; // Show the restart button
 }
+restartButton.addEventListener('click', () => {
+    location.reload(); // Reload the page to restart the game
+});
 
 const changeDirection = e => {// adapted for WASD controls Change to switch statement for better readability
     // Changing velocity value based on key press
@@ -87,8 +88,12 @@ const changeDirection = e => {// adapted for WASD controls Change to switch stat
 controls.forEach(button => button.addEventListener("click", () => changeDirection({ key: button.dataset.key })));
 
 const initGame = () => {
-    if (gameOver) return handleGameOver();
+    if (gameOver) {
+        return handleGameOver();
+    }
+
     let html = `<div class="food" style="grid-area: ${foodY} / ${foodX}"></div>`;
+
 
     // Checking if the snake hit the food
     if (snakeX === foodX && snakeY === foodY) {
@@ -126,11 +131,12 @@ const initGame = () => {
     playBoard.innerHTML = html;
 }
 updateFoodPosition();
-const setGameMode = (mode) => { //added for game mode selection
+const setGameMode = (mode) => {
     currentSpeed = gameSpeed[mode];
     if (setIntervalId) clearInterval(setIntervalId);
-    // setIntervalId = setInterval(runGame, currentSpeed);
     setIntervalId = setInterval(initGame, currentSpeed); // Dynamically change the game speed based on the selected mode
-    document.addEventListener("keydown", changeDirection); // change from Keyup to keyDown for more responsive controls
+    document.addEventListener("keydown", changeDirection); // Attach the keydown event for better control response
+    restartButton.style.display = 'none'; // Hide the restart button when game mode is set
 };
 
+setGameMode('easy'); // Or any default mode you'd like to start with

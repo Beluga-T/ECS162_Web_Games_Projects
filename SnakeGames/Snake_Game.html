@@ -22,6 +22,8 @@
 
     <canvas id="starCanvas"></canvas>
     <h1 class="title">Snake</h1>
+    <button id="restartButton" class="btn" style="display: none;">Restart Game</button>
+
     <div class="wrapper">
         <div class="gamemode"> <!-- Added different game difficulty by seting different gamespeed -->
             <button class="btn" id="ez" onclick="setGameMode('easy')">Easy Mode</button>
@@ -31,10 +33,9 @@
 
         <div class="game-details">
             <span class="score">Score: 0</span>
-
             <span class="high-score">High Score: 0</span>
-
         </div>
+
 
         <div class="play-board"></div>
         <div class="controls">
