@@ -14,7 +14,18 @@ document.addEventListener('DOMContentLoaded', function () {
             return x - Math.floor(x);
         };
     }
+    const starCanvas = document.getElementById('starCanvas');
 
+    function adjustCanvasHeight() {
+        // Set the canvas height to the full document height
+        starCanvas.style.height = `${document.documentElement.scrollHeight}px`;
+    }
+
+    // Adjust the canvas size on load
+    adjustCanvasHeight();
+
+    // Adjust the canvas size whenever the window resizes
+    window.onresize = adjustCanvasHeight;
     function initStars() {
         const random = SeedRandom(seed);  // Use the seeded random generator here
         stars = []; // clear the stars array

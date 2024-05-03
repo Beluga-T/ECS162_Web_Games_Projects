@@ -4,39 +4,39 @@ const scoreElement = document.querySelector(".score");
 const highScoreElement = document.querySelector(".high-score");
 const controls = document.querySelectorAll(".controls i");
 
-let gameOver = false;
-let foodX, foodY;
-let snakeX = 5, snakeY = 5;
-let velocityX = 0, velocityY = 0;
-let snakeBody = [];
-let setIntervalId;
-let score = 0;
-let currentSpeed = 200;
+let gameOver = false; // Game over flag
+let foodX, foodY; // Food position
+let snakeX = 5, snakeY = 5; // Snake head position 
+let velocityX = 0, velocityY = 0; // Snake velocity 
+let snakeBody = []; // Snake body array
+let setIntervalId; // Interval id for the game loop
+let score = 0; // Score
+let currentSpeed = 200; // Game speed in milliseconds
 
-const gameSpeed = {
+const gameSpeed = { //added for game mode selection
     'easy': 200,
     'hard': 50,
     'crazy': 25
 };
 // Getting high score from the local storage
-let highScore = localStorage.getItem("high-score") || 0;
-highScoreElement.innerText = `High Score: ${highScore}`;
+let highScore = localStorage.getItem("high-score") || 0; //added for high score tracking
+highScoreElement.innerText = `High Score: ${highScore}`; //added for high score tracking
 
 
-const updateFoodPosition = () => {
+const updateFoodPosition = () => { //added for food position update
     // Passing a random 1 - 30 value as food position
     foodX = Math.floor(Math.random() * 30) + 1;
     foodY = Math.floor(Math.random() * 30) + 1;
 }
 
-const handleGameOver = () => {
+const handleGameOver = () => { //Game over handling
     // Clearing the timer and reloading the page on game over
     clearInterval(setIntervalId);
     alert("Game Over! Press OK to replay...");
     location.reload();
 }
 
-const changeDirection = e => {// adapted for WASD controls
+const changeDirection = e => {// adapted for WASD controls Change to switch statement for better readability
     // Changing velocity value based on key press
     // if ((e.key === "ArrowUp" || e.key === "w") && velocityY != 1) {
     //     velocityX = 0;
@@ -51,7 +51,7 @@ const changeDirection = e => {// adapted for WASD controls
     //     velocityX = 1;
     //     velocityY = 0;
     // }
-    switch (e.key) {
+    switch (e.key) { // added for WASD controls for easier gameplay on desktop
         case "ArrowUp":
         case "w":
             if (velocityY != 1) {
@@ -130,7 +130,7 @@ const setGameMode = (mode) => { //added for game mode selection
     currentSpeed = gameSpeed[mode];
     if (setIntervalId) clearInterval(setIntervalId);
     // setIntervalId = setInterval(runGame, currentSpeed);
-    setIntervalId = setInterval(initGame, currentSpeed); // 150ms interval for the game loop
+    setIntervalId = setInterval(initGame, currentSpeed); // Dynamically change the game speed based on the selected mode
     document.addEventListener("keydown", changeDirection); // change from Keyup to keyDown for more responsive controls
 };
 

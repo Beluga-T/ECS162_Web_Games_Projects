@@ -7,6 +7,7 @@
 
 
 body {
+    /* Allows content to define the height */
     padding-top: 70px;
     /* This should be at least the height of your nav to prevent overlap */
     display: flex;
@@ -20,7 +21,7 @@ body {
 
 
 .wrapper {
-    /* This is the main container */
+    /* The game container */
 
     max-width: 600px;
     max-height: 700px;
@@ -60,6 +61,7 @@ body {
     display: inline-flexbox
 }
 
+/* Add  hover effect to the buttons */
 #ez:hover {
     background-color: #45a049;
 }

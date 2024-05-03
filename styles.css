@@ -39,10 +39,17 @@ canvas {
 
 #starCanvas {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 150%;
+    min-height: 100vh;
+    /* Minimum height covers at least the viewport */
     z-index: -2;
+    /* Ensures it is behind all content */
+    background-color: #000;
+    /* Just in case it's visible */
 }
+
 
 .content {
     position: relative;

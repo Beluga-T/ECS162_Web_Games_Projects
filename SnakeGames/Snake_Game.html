@@ -22,7 +22,7 @@
 
     <canvas id="starCanvas"></canvas>
     <div class="wrapper">
-        <div class="gamemode">
+        <div class="gamemode"> <!-- Added different game difficulty by seting different gamespeed -->
             <button class="btn" id="ez" onclick="setGameMode('easy')">Easy Mode</button>
             <button class="btn" id="HD" onclick="setGameMode('hard')">Hard Mode</button>
             <button class="btn" id="CZ" onclick="setGameMode('crazy')">Crazy Mode</button>
@@ -37,7 +37,9 @@
 
         <div class="play-board"></div>
         <div class="controls">
+            <!-- Arrow keys for the game for touch screen users -->
             <i data-key="ArrowLeft" class="fa-solid fa-arrow-left-long"></i>
+            <!-- Arrow keys for the game for touch screen users -->
             <i data-key="ArrowUp" class="fa-solid fa-arrow-up-long"></i>
             <i data-key="ArrowRight" class="fa-solid fa-arrow-right-long"></i>
             <i data-key="ArrowDown" class="fa-solid fa-arrow-down-long"></i>
