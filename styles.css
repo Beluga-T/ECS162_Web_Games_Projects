@@ -28,19 +28,19 @@ header {
 }
 
 canvas {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: 0;
     background-color: #000;
 }
 
-#canvas-container {
+#starCanvas {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 150%;
+    height: 120%;
     z-index: -2;
 }
 
@@ -148,7 +148,6 @@ figcaption h2 {
 }
 
 footer {
-
     position: absolute;
     left: 0;
     width: 100%;
@@ -156,5 +155,5 @@ footer {
     color: #FFF;
     padding: 10px 0;
     background-color: rgba(44, 62, 80, 0.8);
-    z-index: 100;
+    z-index: 1;
 }
