@@ -17,6 +17,7 @@
 <body>
     <canvas id="starCanvas"></canvas>
     <h1>Guess the Word</h1>
+    <div id="game-message"></div>
     <div class="board__container">
         <div class="board">
             <div class="cell" id="1"></div>
@@ -54,8 +55,9 @@
     <input type="text" id="userGuess" placeholder="Enter a 5 letter word" maxlength="5" pattern="[A-Za-z]+"
         title="Only alphabetical characters are allowed">
     <button onclick="makeGuess()">Enter</button>
+    <div id="error-message"></div>
     <footerSubpages>
-        <p>Copyright &copy; 2024 Little Game Arcade</p>
+        <p>Copyright &copy; 2024 Game Arcade</p>
         Snake Game adapted from a project by <a href="https://github.com/anantaraha/snakeloop">anantaraha on GitHub</a>.
         Licensed under the <a href="https://github.com/anantaraha/snakeloop/blob/main/LICENSE">MIT License</a>.
     </footerSubpages>
