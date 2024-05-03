@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hangman Game</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="Wordle_style.css">
+        <script src="Wordle_style.js"></script>
+        <script src="../home_script.js"></script>
+    </head>
+    <nav>
+        <a href="../index.html">Home</a></li>
+        <h1>Wordle Game</h1>
+    </nav>
+    <body>
+        <canvas id="starCanvas"></canvas>
+        <h1>Guess the Word</h1>
+        <div class="board__container">
+            <div class="board">
+                <div class="cell" id="1"></div>
+                <div class="cell" id="2"></div>
+                <div class="cell" id="3"></div>
+                <div class="cell" id="4"></div>
+                <div class="cell" id="5"></div>
+                <div class="cell" id="6"></div>
+                <div class="cell" id="7"></div>
+                <div class="cell" id="8"></div>
+                <div class="cell" id="9"></div>
+                <div class="cell" id="10"></div>
+                <div class="cell" id="11"></div>
+                <div class="cell" id="12"></div>
+                <div class="cell" id="13"></div>
+                <div class="cell" id="14"></div>
+                <div class="cell" id="15"></div>
+                <div class="cell" id="16"></div>
+                <div class="cell" id="17"></div>
+                <div class="cell" id="18"></div>
+                <div class="cell" id="19"></div>
+                <div class="cell" id="20"></div>
+                <div class="cell" id="21"></div>
+                <div class="cell" id="22"></div>
+                <div class="cell" id="23"></div>
+                <div class="cell" id="24"></div>
+                <div class="cell" id="25"></div>
+                <div class="cell" id="26"></div>
+                <div class="cell" id="27"></div>
+                <div class="cell" id="28"></div>
+                <div class="cell" id="29"></div>
+                <div class="cell" id="30"></div>
+            </div>
+        </div>
+        <input type= "text" id="userGuess" placeholder="Enter a 5 letter word" maxlength="5" pattern="[A-Za-z]+" title="Only alphabetical characters are allowed">
+        <button onclick="makeGuess()">Enter</button>
+    </body>
+</html>

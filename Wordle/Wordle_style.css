@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin-top: 70px;
+    COLOR: #ffffffdb;
+}
+pre {
+    display: inline-block;
+    /* Allows the block itself to be centered as an inline element */
+    text-align: left;
+    /* Keeps text inside the pre block aligned to the left */
+    font-family: 'Courier New', monospace;
+    /* Monospace font for consistent character width */
+    white-space: pre;
+    /* Preserves whitespace and formatting of the text */
+    font-size: 16px;
+    /* Adjustable font size */
+    color: #ffffff;
+    /* Text color for visibility */
+    background-color: #000;
+    /* Background color for contrast */
+    padding: 10px;
+    /* Padding around text */
+    border-radius: 5px;
+    /* Rounded corners */
+    margin: 20px auto;
+    /* Vertical margins and horizontal auto for centering */
+    line-height: 1.5;
+    /* Line height for better readability */
+    width: auto;
+    /* Width is auto to wrap the content */
+    max-width: 80%;
+    /* Max-width to prevent overly wide blocks on large screens */
+}
+input,
+button {
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 36px;
+    background-color: gray;
+    color: white;
+    font-weight: 700;
+}
+::placeholder{
+    color: white;
+}
+.board__container{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(5, 64px);
+    grid-template-rows: repeat(6, 64px);
+    gap: 4px;
+}
+.cell{
+    border: 2px solid gray;
+    font-weight: 700;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+.green{
+    background-color: green;
+}
+.orange{
+    background-color: orange;
+}
+.gray {
+    background-color: gray;
+}
