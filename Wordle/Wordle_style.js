@@ -34,6 +34,7 @@ function makeGuess(){
         document.getElementById("userGuess").value = ""
         return
     }
+    
     const firstLetterOfWordID = guessCount * 5 + 1
     let curr = word
     for(let i = 0; i < currentWord.length; i++){
