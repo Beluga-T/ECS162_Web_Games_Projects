@@ -169,3 +169,17 @@ footerSubpages {
     background-color: rgba(44, 62, 80, 0.8);
     z-index: 100;
 }
+/* 
+RESPONSIVENESS FOR MOBILE
+*/
+@media (max-width: 768px) {
+    .content{
+        width: 85%;
+    }
+    figcaption h2{
+        font-size: 18px;
+    }
+    a{
+        font-size: 14px;
+    }
+}
