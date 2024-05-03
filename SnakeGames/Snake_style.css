@@ -75,9 +75,11 @@ body {
 }
 
 .game-details {
+    /* The game details container */
     color: #B8C6DC;
     font-weight: 500;
     font-size: 1.2rem;
+    /* increase the font size */
     padding: 20px 27px;
     display: flex;
     justify-content: space-between;
