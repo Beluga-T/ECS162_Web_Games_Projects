@@ -7,8 +7,11 @@
 
 body,
 html {
-    height: 100%;
-    overflow: hidden;
+    height: auto;
+    /* Allows content to define the height */
+    overflow: auto;
+    /* Enables scrolling if content overflows */
+
 }
 
 header {
@@ -36,9 +39,9 @@ canvas {
 
 #starCanvas {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+    width: 150%;
+    height: 150%;
+    z-index: -2;
 }
 
 .content {
@@ -151,8 +154,7 @@ footer {
     width: 100%;
     text-align: center;
     color: #FFF;
-    font-size: 16px;
     padding: 10px 0;
-    background-color: rgba(44, 62, 80, 0.5);
-    z-index: 2;
+    background-color: rgba(44, 62, 80, 0.8);
+    z-index: 1;
 }
