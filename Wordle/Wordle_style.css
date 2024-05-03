@@ -74,3 +74,20 @@ button {
 .gray {
     background-color: gray;
 }
+#error-message{
+    margin-top: 12px;
+    color: red;
+    font-size: 18px;
+}
+#game-message{
+    margin-top: 12px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+.win{
+    color: green;
+}
+.loss{
+    color: red;
+}
