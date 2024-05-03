@@ -17,7 +17,7 @@ body {
     COLOR: #ffffffdb;
 }
 
-.title{
+.title {
     margin: 12px 0 24px 0;
 }
 
@@ -122,6 +122,19 @@ body {
     cursor: pointer;
     border-right: 1px solid #171B26;
     background: #60ffb2;
+}
+
+footerSNAKE {
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+    /* bottom: 0; */
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    padding: 10px 0;
+    background-color: rgba(44, 62, 80, 0.8);
+    z-index: 100;
 }
 
 
