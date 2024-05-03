@@ -14,15 +14,12 @@ body {
     justify-content: center;
     min-height: 100vh;
     background: #E3F2FD;
+    COLOR: #ffffffdb;
 }
 
-h1{
-    font-size: 32px;
-    color: #ffffffdb;
-    text-align: center;
+.title{
     margin: 12px 0 24px 0;
 }
-
 
 .wrapper {
     /* The game container */
