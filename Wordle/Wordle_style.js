@@ -63,7 +63,7 @@ function checkGame(lastGuess){
             initializeGame()
         }, 150);
     } else if(guessCount == 6){
-        alert("Correct word was" + word)
+        alert("Correct word was " + word)
         setTimeout(() => {
             initializeGame()
         }, 150);
