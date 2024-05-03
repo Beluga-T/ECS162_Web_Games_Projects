@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function adjustCanvasHeight() {
         // Set the canvas height to the full document height
-        starCanvas.style.height = `${document.documentElement.scrollHeight}px`;
+        starCanvas.style.height = `${document.documentElement.scrollHeight + 200}px`;
     }
 
     // Adjust the canvas size on load
